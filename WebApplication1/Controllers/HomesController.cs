@@ -16,9 +16,9 @@ namespace WebApplication1.Controllers
                 new Employee() {EmployeeId = 4, Name = "Ram" , Age = 20 } ,
                 new Employee() { EmployeeId = 5, Name = "Ron" , Age = 31 } ,
                 new Employee() {EmployeeId = 4,Name = "Chris" , Age = 17 } ,
+                new Employee() {EmployeeId = 4, Name = "Rob" , Age = 19 },
                 new Employee() {EmployeeId = 4, Name = "Rob" , Age = 19 }
             };
-
 
         public ActionResult Index()
         {
