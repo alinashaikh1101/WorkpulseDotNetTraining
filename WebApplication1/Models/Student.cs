@@ -6,33 +6,42 @@ using System.Web;
 
 
 
-namespace WebTaskTwo.Models
+namespace WebApplication1.Models
 {
     public class Student
     {
         public int StudentId { get; set; }
-        public string Name { get; set; }
         [Required(ErrorMessage = "Please enter student name.")]
+
+        public string Name { get; set; }
+        [Required]
        
-        public string Age { get; set; }
-        [Required(ErrorMessage = "Please select gender")]
-        public string Gender { get; set; }
+
+        
+        public int Age { get; set; }
         [Required(ErrorMessage = "Please enter student age.")]
-        public int profession { get; set; }
-        [Required(ErrorMessage = "Please enter student Proffesion.")]
-        public string HireDate { get; set; }
-
-
-
-        [Required(ErrorMessage = "Please select a date ")]
-        [DataType(DataType.Date)]
-        public DateTime? skills { get; set; }
-        public int Salary { get; set; }
-        [Required(ErrorMessage = "Please enter salary.")]
+        
+        public string Gender { get; set; }
         
 
+        [Required(ErrorMessage = "Please enter student Position.")]
+        public string Position { get; set; }
 
+        [DataType(DataType.Date)]
+        public DateTime HireDate { get; set; }
+        public string Skill { get; set; }
+        [Required]
+        public string Subject { get; set; }
+        public string Office { get; set; }
+        public string Description { get; set; }
 
+        public bool isActive { get; set; }
 
+        [Required]
+        [DataType(DataType.Currency)]
+        public int Salary { get; set; }
+
+        
     }
+
 }

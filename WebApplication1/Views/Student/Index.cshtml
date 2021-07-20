@@ -7,40 +7,53 @@
 
 <h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div>
+    @Html.ActionLink("Add Student", "Add")
+</div>
+
+
+
 <table class="table">
     <tr>
-         @* @Html.DisplayNameFor(model => model.StudentName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Age)
-        </th>*@
-        <th></th>
+        @* @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>*@
+        <th>Name</th>
+        <th>Age</th>
+        <th>Office</th>
     </tr>
 
-    @foreach (var item in Model )
+    @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Age)
-    </td>
-    
-
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) |
-        @Html.ActionLink("Details", "Details", new { id = item.StudentId }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })
-        
-
-    </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Office)
+            </td>
 
 
-</tr>
+
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.StudentId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.StudentId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.StudentId })
+
+                
+
+
+
+            </td>
+
+
+        </tr>
     }
 
 </table>

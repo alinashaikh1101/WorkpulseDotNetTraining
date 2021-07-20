@@ -10,15 +10,15 @@ namespace WebApplication1.Controllers
     public class HomesController : Controller
     {
         static IList<Employee> EmployeeList = new List<Employee>{
-                new Employee() { EmployeeId = 1, Name = "John", Age = 18 } ,
-                new Employee() {EmployeeId = 2,  Name = "Steve",  Age = 21 } ,
-                new Employee() { EmployeeId= 3, Name = "Bill",  Age = 25 } ,
-                new Employee() {EmployeeId = 4, Name = "Ram" , Age = 20 } ,
-                new Employee() { EmployeeId = 5, Name = "Ron" , Age = 31 } ,
-                new Employee() {EmployeeId = 4,Name = "Chris" , Age = 17 } ,
-                new Employee() {EmployeeId = 4, Name = "Rob" , Age = 19 },
-                new Employee() {EmployeeId = 4, Name = "Rob" , Age = 19 },
-                new Employee() {EmployeeId = 4, Name = "Rob" , Age = 19 }
+                new Employee() { EmployeeId = 1, Name = "John", Age = 18 ,} ,
+                new Employee() {EmployeeId = 2,  Name = "Steve",  Age = 21,Position="trainee",Office="indore", Salary=10000  } ,
+                new Employee() { EmployeeId= 3, Name = "Bill",  Age = 25, Position="trainee",Office="indore",Salary=10000} ,
+                new Employee() {EmployeeId = 4, Name = "Ram" , Age = 20, Position="trainee",Office="indore", Salary=10000} ,
+                new Employee() { EmployeeId = 5, Name = "Ron" , Age = 31, Position="trainee", Office="indore", Salary=10000} ,
+                new Employee() {EmployeeId = 4,Name = "Chris" , Age = 17, Position="trainee", Office="indore",Salary=10000 } ,
+                new Employee() {EmployeeId = 4, Name = "Rob" , Age = 19, Position="trainee",Office="indore",Salary=10000},
+                new Employee() {EmployeeId = 4, Name = "Rob" , Age = 19, Position="trainee", Office="indore",Salary=10000 },
+                new Employee() {EmployeeId = 4, Name = "Rob" , Age = 19, Position="trainee", Office="indore", Salary=10000}
             };
 
         public ActionResult Index()
@@ -28,11 +28,11 @@ namespace WebApplication1.Controllers
            
         }
 
-        public ActionResult Create()
-        {
+        //public ActionResult Create()
+        //{
           
-            return View();
-        }
+            //return View();
+        //}
 
         [HttpPost]
 
@@ -46,7 +46,9 @@ namespace WebApplication1.Controllers
                 employee.Age = Convert.ToInt32(formCollection["Age"]);
                 employee.Position = formCollection["Position"];
                 employee.Office = formCollection["Office"];
+                
                 employee.HireDate = Convert.ToDateTime(formCollection["HireDate"]);
+
                 employee.Salary = Convert.ToInt32(formCollection["Salary"]);
                 employee.Description = formCollection["Description"];
                 employee.Skills = formCollection["Skills"];

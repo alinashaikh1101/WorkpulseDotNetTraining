@@ -4,14 +4,6 @@
 
 
 <h2>Details</h2>
-
-
-
-
-
-
-
-
 <table class="table">
     <tr>
         <th>
@@ -44,8 +36,13 @@
         <th>
             HireDate
         </th>
-        
-  
+        <th>
+            Description
+        </th>
+        <th>
+            Skill
+        </th>
+
 
 
 
@@ -76,7 +73,14 @@
         <td>
             @ViewBag.Student.HireDate
         </td>
+        <td>
+            @ViewBag.Student.Description
+        </td>
+        <td>
+            @ViewBag.Student.Skill
+        </td>
 
         <div>
             @Html.ActionLink("Back to List", "Index")
         </div>
+</table>

@@ -1,4 +1,4 @@
-﻿using System;
+﻿using WebApplication1.Models;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +8,7 @@ namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
             return View();
