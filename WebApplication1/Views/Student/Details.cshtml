@@ -1,34 +1,51 @@
-﻿@model IEnumerable<WebApplication1.Models.Student>
-@{ ViewBag.Title = "Details";
+﻿@{ ViewBag.Title = "Details";
                 Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 
 
 <h2>Details</h2>
 
+
+
+
+
+
+
+
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            Name
+        </th>
+
+
+
+        <th>
+            Age
+        </th>
+
+
+        <th>
+            Gender
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Age)
+            Position
+        </th>
+
+
+        <th>
+            Salary
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Gender)
+            Office
         </th>
+
+
         <th>
-            @Html.DisplayNameFor(model => model.Office)
+            HireDate
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Position)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.HireDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Salary)
-        </th>
+        
+  
 
 
 
@@ -36,35 +53,30 @@
 
 
 
-    @foreach (var item in Model)
-    {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.Name)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Age)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Gender)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Office)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Position)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.HireDate)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Salary)
-    </td>
 
+    <tr>
+        <td>
+            @ViewBag.Student.Name
+        </td>
+        <td>
+            @ViewBag.Student.Age
+        </td>
+        <td>
+            @ViewBag.Student.Gender
+        </td>
+        <td>
+            @ViewBag.Student.Position
+        </td>
+        <td>
+            @ViewBag.Student.Salary
+        </td>
+        <td>
+            @ViewBag.Student.Office
+        </td>
+        <td>
+            @ViewBag.Student.HireDate
+        </td>
 
-</tr>}
-</table>
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-
+        <div>
+            @Html.ActionLink("Back to List", "Index")
+        </div>
